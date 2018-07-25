@@ -1,7 +1,9 @@
 # login-register-form-php
-styles.css styles
-index.php login/registration form
-srlog.php login validation
-srreg.php registration
-profile.php after login or register you will redirected on this page
-sesion.php Checks if session was started or not, it's for redirection on profile.php
+styles.css styles <br>
+index.php login/registration form <br>
+srlog.php login validation <br>
+srreg.php registration <br>
+profile.php after login or register you will redirected on this page <br>
+sesion.php Checks if session was started or not, it's for redirection on profile.php <br>
+
+does not working image upload, does not working login validation
