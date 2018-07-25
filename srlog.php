@@ -17,9 +17,9 @@
             $logcnt    = $logrow['total'];
             if($logcnt == 1) {
                 session_start();
-                $_SESSION['logedin'] = true;
+                $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $logusername;
-                $_SESSION['success'] = "You are now logged in";
+                $_SESSION['success']  = "You are now logged in";
                 header('location:profile.php');
             } else {
                 array_push($errors, "Wrong username/password combination");
