@@ -6,4 +6,5 @@ srreg.php registration <br>
 profile.php after login or register you will redirected on this page <br>
 sesion.php Checks if session was started or not, it's for redirection on profile.php <br>
 
-does not working image upload, does not working login validation
+# problem
+does not working image upload or could not display image
