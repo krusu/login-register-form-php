@@ -3,14 +3,14 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Page Title</title>
+    <title>for fun</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
     <h1>Welcome: <?php echo $_SESSION['username'];?></h1>
     <h3><?php echo $_SESSION['success'];?></h3>
-        <?php echo $_SESSION['img']; ?>
+    <img src="<?php echo $img['UserImg'];?>" heigth="100" width="100">;
     <form method="get">
         <button name="logout">Logout</button>
     </form>
