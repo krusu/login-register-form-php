@@ -4,7 +4,7 @@ index.php login/registration form <br>
 srlog.php login validation <br>
 srreg.php registration <br>
 profile.php after login or register you will redirected on this page <br>
-session.php Checks if session was started or not, it's for redirection on profile.php <br>
+session.php Checks if session was started or not, it's for redirection on index.php from profile.php <br>
 connection.php connects to database <br>
 
 # problems:
