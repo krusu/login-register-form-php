@@ -3,8 +3,8 @@
     $errors  = array(); 
     $logpass = $logusername = "";   
     if(isset($_POST['login'])){
-        $logusername  = mysqli_real_escape_string($db, $_POST['logusername']);
-        $logpass      = mysqli_real_escape_string($db, $_POST['logpass']);
+        $logusername = mysqli_real_escape_string($db, $_POST['logusername']);
+        $logpass     = mysqli_real_escape_string($db, $_POST['logpass']);
         if (empty($logusername) || empty($logpass)){
             array_push($errors, "Username is required");
         } 
@@ -19,9 +19,11 @@
                 header('location:profile.php');
             } 
             else{
-                array_push($errors, "Wrong username/password combination");
                 header('location: index.php');
             }
+        }
+        else{
+            header('location: index.php');
         }
     }
 ?>
