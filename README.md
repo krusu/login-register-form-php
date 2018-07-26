@@ -8,5 +8,4 @@ session.php Checks if session was started or not, it's for redirection on profil
 connection.php connects to database <br>
 
 # problems:
-1.can't upload image in DB but in db saves '"path" + "image name"' and gets image from upload folder.. <br>
-2.can't check if session was started when going on index.php
+1.can't upload image in DB but in db saves '"path" + "image name"' and gets image from upload folder..
