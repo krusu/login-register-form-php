@@ -1,10 +1,7 @@
 <?php
+include ('conection.php');
     $errors   = array(); 
     $firstname= $lastname = $pass1 = $pass2 = $username = $email = $UserImg ="";
-    $db       = mysqli_connect("localhost", "root", "", "users");
-    if($db === false){
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-    }
     if(isset($_POST['register'])){
         $firstname= mysqli_real_escape_string($db, $_POST['firstname']);
         $lastname = mysqli_real_escape_string($db, $_POST['lastname']);
@@ -12,15 +9,13 @@
         $email    = mysqli_real_escape_string($db, $_POST['email']);
         $pass1    = mysqli_real_escape_string($db, $_POST['pass1']);
         $pass2    = mysqli_real_escape_string($db, $_POST['pass2']);
-        $UserImg  = mysqli_real_escape_string($db, $_POST['image']);
-        $target   = "upload/";
-        $target   = $target . basename( $_FILES['image']['name']); 
+        $target   = "upload/". basename( $_FILES['image']['name']); 
         $UserImg = ($_FILES['image']['name']); 
-        if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){ 
-            echo "The file ". basename( $_FILES['uploadedfile']['name']). " has been uploaded, and your information has been added to the directory"; 
-        } else{
-            array_push($errors, "field is required");
-        } 
+        // if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){ 
+        //     echo "The file ". basename( $_FILES['uploadedfile']['name']). " has been uploaded, and your information has been added to the directory"; 
+        // } else{
+        //     array_push($errors, "field is required");
+        // } 
         if(empty($firstname) || empty($lastname) || empty($username) || empty($email) || empty($pass1) || empty($pass2) || $pass1 != $pass2){
             array_push($errors, "field is required");
         } 

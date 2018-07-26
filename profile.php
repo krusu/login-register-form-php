@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <h1>Welcome: <?php echo $_SESSION['username'];?></h1>
-    <h3><?php echo $_SESSION['success'];?></h3>
-    <img src="<?php echo $img['UserImg'];?>" heigth="100" width="100">;
+    <h1>Welcome: <?php echo $_SESSION['username'];?></h1> <br>
+    <h3><?php echo $_SESSION['success'];?></h3> <br>
+    <?php echo $row;?>
     <form method="get">
         <button name="logout">Logout</button>
     </form>
