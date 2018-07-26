@@ -1,5 +1,5 @@
 # login-register-form-php
-styles.css styles <br>
+styles.css styles for login/registration form <br>
 index.php login/registration form <br>
 srlog.php login validation <br>
 srreg.php registration <br>
