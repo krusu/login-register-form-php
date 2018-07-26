@@ -4,7 +4,9 @@ index.php login/registration form <br>
 srlog.php login validation <br>
 srreg.php registration <br>
 profile.php after login or register you will redirected on this page <br>
-sesion.php Checks if session was started or not, it's for redirection on profile.php <br>
+session.php Checks if session was started or not, it's for redirection on profile.php <br>
+connection.php connects to database <br>
 
-# problem
-does not working image upload or could not display image
+# problems:
+1.can't upload image in DB but in db saves '"path" + "image name"' and gets image from upload folder..
+2.can't check if session was started when going on index.php
