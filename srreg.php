@@ -22,7 +22,7 @@ include ('conection.php');
         $result = mysqli_fetch_assoc(mysqli_query($db, "SELECT count(*) FROM users WHERE username='$username' AND email = '$email'"));
         if(implode($result)<1 && count($errors)<1){
             $pass1 = md5($pass1);
-            $sql = "INSERT INTO users (firstname, lastname, username, email, pass, UserImg) VALUES ('$firstname', '$lastname', '$username', '$email', '$pass1', '$UserImg')";
+            $sql = "INSERT INTO users (firstname, lastname, username, email, pass, UserImg) VALUES ('$firstname', '$lastname', '$username', '$email', '$pass1', '$target')";
             mysqli_query($db, $sql);
             session_start();
             $_SESSION['loggedin'] = true;

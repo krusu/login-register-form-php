@@ -10,7 +10,7 @@
 <body>
     <h1>Welcome: <?php echo $_SESSION['username'];?></h1> <br>
     <h3><?php echo $_SESSION['success'];?></h3> <br>
-    <?php echo $row;?>
+    <?php echo $row.'height="100px" width="100px">';?>
     <form method="get">
         <button name="logout">Logout</button>
     </form>
