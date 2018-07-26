@@ -1,5 +1,5 @@
 <?php
-    include ('conection.php');
+    include ('connection.php');
     $errors  = array(); 
     $logpass = $logusername = "";   
     if(isset($_POST['login'])){

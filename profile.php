@@ -1,4 +1,4 @@
-<?php include('sesion.php'); ?>
+<?php include('session.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>

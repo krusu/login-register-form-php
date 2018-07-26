@@ -1,5 +1,5 @@
 <?php
-include ('conection.php');
+include ('connection.php');
     $errors   = array(); 
     $firstname= $lastname = $pass1 = $pass2 = $username = $email = $UserImg ="";
     if(isset($_POST['register'])){
@@ -11,11 +11,6 @@ include ('conection.php');
         $pass2    = mysqli_real_escape_string($db, $_POST['pass2']);
         $target   = "upload/". basename( $_FILES['image']['name']); 
         $UserImg = ($_FILES['image']['name']); 
-        // if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){ 
-        //     echo "The file ". basename( $_FILES['uploadedfile']['name']). " has been uploaded, and your information has been added to the directory"; 
-        // } else{
-        //     array_push($errors, "field is required");
-        // } 
         if(empty($firstname) || empty($lastname) || empty($username) || empty($email) || empty($pass1) || empty($pass2) || $pass1 != $pass2){
             array_push($errors, "field is required");
         } 

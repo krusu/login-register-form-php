@@ -1,5 +1,13 @@
 <?php include('srlog.php'); ?>
 <?php include('srreg.php');?>
+<?php session_start();
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+		header('location: profile.php');
+	} else{
+		session_unset();
+		session_destroy();
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
