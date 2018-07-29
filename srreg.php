@@ -27,7 +27,10 @@ include ('connection.php');
         }
         if(empty($firstname) || empty($lastname) || empty($username) || empty($email) || empty($pass1) || empty($pass2) || $pass1 != $pass2){
             array_push($errors, "field is required");
-        } 
+        }
+        if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,}$/', $pass1)) {
+            array_push($errors, "Password does not meet the requirements! It must be alphanumeric and atleast 8 characters long");
+        }
         $result   = mysqli_fetch_assoc(mysqli_query($db, "SELECT count(*) FROM users WHERE username='$username' AND email = '$email'"));
         if(implode($result)<1 && count($errors)<1){
             $pass1= md5($pass1);

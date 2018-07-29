@@ -21,5 +21,9 @@
             header('location: index.php');
         }
     ?>
+    <form method="post" action="upload.php" enctype="multipart/form-data">
+        <input type="file" name="userfiles">
+        <input type="submit" name="uploadimgs">
+    </form>
 </body>
 </html>

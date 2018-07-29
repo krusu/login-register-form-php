@@ -1,6 +1,7 @@
 <?php include('srlog.php'); ?>
 <?php include('srreg.php');?>
-<?php session_start();
+<?php 
+	session_start();
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 		header('location: profile.php');
 	} else{
@@ -87,10 +88,10 @@ $(function() {
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required value="<?php echo $username;?>">
 									</div>
                                     <div class="form-group">
-										<input type="text" name="firstname" id="username" tabindex="1" class="form-control" placeholder="firstname" required value="<?php echo $firstname;?>">
+										<input type="text" name="firstname" id="firstname" tabindex="1" class="form-control" placeholder="firstname" required value="<?php echo $firstname;?>">
 									</div>
                                     <div class="form-group">
-										<input type="text" name="lastname" id="username" tabindex="1" class="form-control" placeholder="lastname" required value="<?php echo $lastname;?>">
+										<input type="text" name="lastname" id="lastname" tabindex="1" class="form-control" placeholder="lastname" required value="<?php echo $lastname;?>">
 									</div>
 									<div class="form-group">
 										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" required value="<?php echo $email;?>">
@@ -99,7 +100,7 @@ $(function() {
 										<input type="password" name="pass1" id="password" tabindex="2" class="form-control" placeholder="Password" required value="<?php echo $pass1;?>">
 									</div>
 									<div class="form-group">
-										<input type="password" name="pass2" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required value="<?php echo $pass1;?>">
+										<input type="password" name="pass2" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required value="<?php echo $pass2;?>">
 									</div>
 									<div class="fprm-group">
 										<input type="file" name="image">
