@@ -32,6 +32,15 @@
                 header('location: profile.php');
                 }
             }
+            else {
+                header('location: profile.php');
+            }
         }
+        else {
+            header('location: profile.php');
+        }
+    }
+    else {
+        header('location: profile.php');
     }
 ?>

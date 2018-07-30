@@ -28,6 +28,7 @@
     <?php
         for($x=0; $x<count($images); $x++){
             echo '<img src ="'.$images[$x].'" ""height = "200px" width = "200px">';
+            echo "<br>";
         }
     ?>
 </body>
