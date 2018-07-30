@@ -11,10 +11,11 @@
         if(count($errors) == 0){
             $pswrdchk = md5($logpass);
             $logrow   = mysqli_fetch_row(mysqli_query($db, "SELECT count(*) FROM users WHERE username = '$logusername' AND pass = '$pswrdchk'"));
-                if(implode($logrow) == 1){
+            if(implode($logrow) == 1){
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $logusername;
+                $_SESSION['UserID']   = $
                 $_SESSION['success']  = "You are now logged in";
                 header('location:profile.php');
             } 
