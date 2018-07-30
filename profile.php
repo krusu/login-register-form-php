@@ -25,5 +25,6 @@
         <input type="file" name="userfiles">
         <input type="submit" name="uploadimgs">
     </form>
+    <!-- <?php echo $userid;?> -->
 </body>
 </html>
